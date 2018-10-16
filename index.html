@@ -1,1 +1,164 @@
-Hello World
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Will Jennings' Homepage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<!--<a href="index.html" class="title">Will Jennings</a>-->
+			<nav>
+				<ul>
+					<li><a href="index.html" class="active">Home</a></li>
+					<!--<li><a href="phd.html">Astrophysics</a></li>-->
+					<li><a href="masters.html">Master's</a></li>
+					<!--<li><a href="fun.html">Fun</a></li>-->
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Intro -->
+			<section id="intro" class="wrapper style2 fullscreen fade-up">
+				<div class="inner">
+					<h1>Will Jennings</h1>
+					<span class="image left"><img src="images/Profile.png" alt=""/></span>
+					<p> <strong> Astrophysics PhD Student </strong> </p>
+					<p>  I develop and analyse early-Universe simulations in my research, using Bayesian inference and machine learning to improve our understanding of how the Universe looked over 13 billion years ago. Get in touch if you're interested in scientific modelling or if you have a joint project idea. </p>
+				</div>
+			</section>
+
+			<!-- Astrophysics PhD -->
+			<section id="phd" class="wrapper style1 spotlights">
+										
+				<section>
+					<div class="content">
+						<div class="inner">
+							<h2>Machine Learning</h2>
+							<p> Modelling speed is a crucial limiting factor for statistical analysis. A single simulation lasts several hours which is far too long -- I need many thousands of simulations to get a decent comparison with real data. So I've recently used machine learning techniques to speed things up: my trained model is around a billion times faster than the full simulation, and mimics the outputs with less than 3% loss in accuracy!</p>
+							<!--<ul class="actions"> <li><a href="phd.html#machine-learning" class="button">Learn more</a></li> </ul>-->
+						</div>
+					</div>
+				</section>
+				<section>
+					<!--<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>-->
+					<div class="content">
+						<div class="inner">
+							<h2>Bayesian Inference & MCMC</h2>
+							<p> I'm using Bayesian inference with Markov chain Monte Carlo (MCMC) methods to answer questions about the Universe's history. There are many unanswered questions about the early Universe -- and many plausible explanations. For instance, we're sure that the electrical charge of the Universe at some time changed from 0% to 100%. But we disagree over the specifics: what type of radiation was responsible? When did the process start? How long did it last? </p>
+							<!--<ul class="actions"> <li><a href="phd.html#bayesian-inference" class="button">Learn more</a></li> </ul>-->
+						</div>
+					</div>
+				</section>
+				<section>
+					<!--<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>-->
+					<div class="content">
+						<div class="inner">
+							<h2>Mathematical Model</h2>
+							<p>I'm developing my own mathematical theory of what 21cm radiation observations will look like, for many different possible models of the early universe. Observing radiation from 13 billion years ago is very difficult, but we're expecting huge volumes of high quality data from upcoming experiments like the <a href="https://www.skatelescope.org/">SKA</a> and the <a href="https://reionization.org/">HERA</a>. I can use my theory with the data from such experiments to find out which of early-universe model is most likely.</p>
+							<!--<ul class="actions"> <li><a href="phd.html#mathematical-models" class="button">Learn more</a></li> </ul>-->
+						</div>
+					</div>
+				</section>
+			</section>
+	
+	
+			<!-- Masters -->
+			<section id="masters" class="wrapper style3 fade-up">
+				
+				<div class="inner">
+					<h2>Master's Project: Disease Epidemics</h2>
+					<div class="content">
+						<video id="video1" height="150px" class="video" preload="auto"> <source src="videos/1.mp4" type="video/mp4"></video>							
+						<p>I developed a simulation for how diseases spread in a  population, extended from the SIR model which has previously been used to model diseases like Measles, Mumps and Rubella. <strong> Tap the image to play the video.</strong></p>
+					</div>
+
+					<a href="masters.html" class="button fit">Learn more</a>
+				</div>
+				
+				<div class="inner">
+
+					<div class="features">
+						<section>
+							<span class="icon major fa-code"></span>
+							<h3>The Code</h3>
+							<p> My Python class stores all infection and map data, steps the disease forward in time, and analyses whether an epidemic has occured at the end of the simulation.</p>
+						</section>
+						<section>
+							<span class="icon major fa-eye"></span>
+							<h3>Visualisation</h3>
+							<p> I use Jupyter widgets and <strong><a href="https://github.com/bloomberg/bqplot">bqplot</a></strong>, to visualize the spread of the disease in a single simulation, and used <i>matplotlib</i> to store the resulting simulation as a video file.</p>
+						</section>
+						<section>
+							<span class="icon major fa-bar-chart"></span>
+							<h3> Novel Results </h3>
+							<p> I measured a relationship between the risk of an epidemic, and the disease's properties such as infectivity. I also measured an unexpected result of rewiring for cooperative diseases. </p>
+						</section>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact -->
+		<!--	<section id="contact" class="wrapper style1 fade-up">-->
+		<!--		<div class="inner">-->
+		<!--			<h2>Get in touch</h2>-->
+		<!--			<div class="split style1">-->
+		<!--				<section>-->
+		<!--					<form method="post" action="#">-->
+		<!--						<div class="fields">-->
+		<!--							<div class="field half">-->
+		<!--								<label for="name">Name</label>-->
+		<!--								<input type="text" name="name" id="name" />-->
+		<!--							</div>-->
+		<!--							<div class="field half">-->
+		<!--								<label for="email">Email</label>-->
+		<!--								<input type="text" name="email" id="email" />-->
+		<!--							</div>-->
+		<!--							<div class="field">-->
+		<!--								<label for="message">Message</label>-->
+		<!--								<textarea name="message" id="message" rows="5"></textarea>-->
+		<!--							</div>-->
+		<!--						</div>-->
+		<!--						<ul class="actions">-->
+		<!--							<li><a href="" class="button submit">Send Message</a></li>-->
+		<!--						</ul>-->
+		<!--					</form>-->
+		<!--				</section>-->
+		<!--			</div>-->
+		<!--		</div>-->
+		<!--	</section>-->
+		<!--</div>-->
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<!--<li> </li>-->
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/video.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

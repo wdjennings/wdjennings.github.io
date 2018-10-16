@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Master's Computational Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	
+	<body class="is-preload">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="title">Will Jennings</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<!--<li><a href="phd.html">Astrophysics</a></li>-->
+					<li><a href="masters.html" class="active">Master's</a></li>
+					<!--<li><a href="fun.html">Fun</a></li>-->
+				</ul>
+			</nav>
+		</header>
+
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+			
+			<!-- Header box -->
+			<section id="intro" class="wrapper style2 fullscreen fade-up">
+				<div class="inner">
+					<h1>Disease Epidemics Simulation</h1>
+					<p> The spreading processes of diseases, rumours and opinions are often well-approximated by mathematical transmission models. My simulation is based on the SIR model of disease epidemics. </p>
+					
+					<p><strong>Tap on pictures to play videos</strong></p>
+				</div>
+			</section>
+
+			<section id="phd" class="wrapper style2 spotlights">
+										
+				<section>
+					<div class="content">
+						<div class="inner">
+							<h2>Simple SIR Model</h2>					
+							<video id="video1" class="video" preload="auto"> <source src="videos/1.mp4" type="video/mp4"></video>						
+							<p> My simulation stars with a single infected individual at the center of an otherwise healthy city. The city is simulated as a large population of individuals on a big grid. Each individual can be in one of three states: susceptible, infected, or removed. While infected, nodes can pass the infection to any neighbouring node. Infected nodes are then removed after a fixed time interval. The simulation only stops when the disease becomes extinct. This videos shows an example simulation. Susceptible healthy nodes are green, infected nodes are Red, and removed nodes are black. </p>
+						</div>
+					</div>
+				</section>
+				
+				<section>
+					<div class="content">
+						<div class="inner">
+							<h2>Synergy </h2>
+							<p> Some diseases can behave either competitively or cooperatively with itself. In the simple SIR model, the disease is neither cooperative nor comptetive: the probability of a susceptible individual being infected is exactly proportional to how many infected neighbours it has. For example, with two infected neighbours, an individual is twice as likely to be infected; with three infected neighbours, three times as likely; and so on.</p>
+						</div>
+						
+						<div class="inner">
+							<video id="video2" class="video" preload="auto"> <source src="videos/2.mp4" type="video/mp4"></video>
+							<h3>Positive Synergy</h3>								
+							</p>This video demonstrates cooperative synergy. Infected individuals work together to infect new hosts, encouraging infected individuals to progress in small clusters as can be seen here.</p>
+						</div>
+
+						<div class="inner">
+							<video id="video3" class="video" preload="auto"> <source src="videos/3.mp4" type="video/mp4"></video>
+							<h3>Negative Synergy</h3>
+							</p>This video demonstrates competitive synergy. Infected invididuals work against one another, encouraging infected individuals to stay as far apart as possible. In this video, one can see the infection progressing in individual paths or tendrils. </p>
+						</div>						
+					</div>
+				</section>
+						
+				<section>
+					<div class="content">
+						<div class="inner">
+							<h2>Rewiring</h2>					
+							<video id="video4" class="video" preload="auto"> <source src="videos/4.mp4" type="video/mp4"></video>						
+							<p> My simulation allows the disease to randomly jump across the map, simulating infected individuals travelling from one physical location to another. For instance, a person travelling from home to their place of work, or an insect travelling across a field. This video shows how rewiring dramatically increases the chance of an epidemic, although an interesting result was seen for cooperative diseases (see <a href="#results">New Results</a> below).</p>
+						</div>
+					</div>
+				</section>						
+				<section>
+					<div class="content" id="results">
+						<div class="inner">
+							<h2>Novel Results</h2>
+							<p>My results showed a clear dividing line between dangerous 'invasive' diseases and less-risky 'non-invasive' ones. To determine whether a new disease is likely to be invasive, one can measuring its historical infectivity and synergy, and observing which side of the dividing line it lies. </p>
+							<p>Somewhat counter-intuitively, the spread of these diseases can actually be lessened by <i>increasing</i> the frequency of random rewiring jumps. This is because the random jumps prevent the disease from forming hot-spots, and surround the infected individuals with healthy neighbours.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper alt">
+			<div class="inner">
+				<ul class="menu">
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/video.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

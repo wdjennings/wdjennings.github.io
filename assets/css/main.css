@@ -72,16 +72,20 @@ input, select, textarea {
 }
 
 /* Video */
-	.video {
-		float: left;
-		margin: 0 1.5em 1em 0;
-		top: 0.25em;
-		max-width: 40%;
-		min-width: 25f%;
-	}
-	
-.fullwidthbutton {
-	width:100%;
+.video {
+	float: left;
+	margin: 0 1.5em 1em 0;
+	top: 0.25em;
+	max-width: 40%;
+	min-width: 40%;	
+}
+
+.bigvideo {
+	width: 50%;
+	margin: 0 1.5em 1em 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
 }
 
 

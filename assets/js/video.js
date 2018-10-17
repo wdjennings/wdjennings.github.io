@@ -9,7 +9,7 @@ function auto_play(video){
 
 var video1 = document.getElementById('video1');
 video1.addEventListener('click',function() { auto_play(video1); },false);
-video1.addEventListener('touchstart',function() { auto_play(video1); },false);
+// video1.addEventListener('touchstart',function() { auto_play(video1); },false);
 
 var video2 = document.getElementById('video2');
 video2.addEventListener('click',function() { auto_play(video2); },false);

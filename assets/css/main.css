@@ -78,6 +78,7 @@ input, select, textarea {
 	top: 0.25em;
 	max-width: 40%;
 	min-width: 40%;	
+    display: block
 }
 
 .bigvideo {

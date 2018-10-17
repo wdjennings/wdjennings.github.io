@@ -81,14 +81,14 @@ input, select, textarea {
 }
 
 .bigvideo {
-	/*max-width: 100%;*/
-	max-width: 90vw;
-	max-height: 90vw;
+	max-width: 100%;
 	margin: 0 1.5em 1em 0;
     margin-left: auto;
     margin-right: auto;
     display: block
 }
+
+
 
 
 /* Basic */

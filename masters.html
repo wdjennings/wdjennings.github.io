@@ -4,6 +4,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
 <html>
 	<head>
 		<title>Disease Simulation</title>
@@ -21,7 +24,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<!--<li><a href="phd.html">Astrophysics</a></li>-->
+					<li><a href="phd.html">21cm Radiation</a></li>
 					<li><a href="masters.html" class="active">Disease Simulation</a></li>
 					<!--<li><a href="fun.html">Fun</a></li>-->
 				</ul>
@@ -33,22 +36,30 @@
 		<div id="wrapper">
 			
 			<!-- Header box -->
-			<section id="intro" class="wrapper style2 fade-up">
+			<section id="intro" class="wrapper intro fade-up">
 				<div class="inner">
 					<h1>Simulation of Disease Epidemics</h1>
-					<p> The spreading of diseases, rumours and opinions are often well-approximated by mathematical transmission models. My simulation is based on the SIR model of disease epidemics.</p>
-					
-					<p><strong>Tap on pictures to pause/play videos</strong></p>
+					<p> My simulation is based on the SIR model of disease epidemics. The page below shows a few videos of my simulation in action, and some of the interesting results that I measured. Check out the old C++ code, along with a new Python implementation, on my GitHub:</p>
+
+					<div class="centering">
+						<ul class="actions fit small">
+							<li></li>
+							<li><a href="https://github.com/wdjennings/Synergy" class="button primary icon fa-github">Synergy Repository</a></li>
+							<li></li>
+						</ul>
+						<p><strong>Scroll down and tap on pictures to pause/play videos</strong></p>
+					</div>
+
 				</div>
 			</section>
 
-			<section id="phd" class="wrapper style2 spotlights">
+			<section id="phd" class="wrapper style1 spotlights">
 				<section>
 					
 					<div class="content">
 						<div class="inner">
 							<h2>Basic Model</h2>
-							<video id="video1" class="video left" poster="images/poster.png" autobuffer preload=auto playsinline loop>
+							<video id="video1" class="video right" poster="images/poster.png" autobuffer preload=auto playsinline loop>
 							<source src="videos/1.mp4.mp4" media="only screen and (min-device-width: 568px)">
 							<source src="videos/1.iphone.mp4" media="only screen and (max-device-width: 568px)">
 							<source src="videos/1.webmsd.webm"></source> 
@@ -76,7 +87,7 @@
 						</div>
 
 						<div class="inner">
-							<video id="video3" class="video left" poster="images/poster.png" autobuffer preload=auto playsinline loop>
+							<video id="video3" class="video right" poster="images/poster.png" autobuffer preload=auto playsinline loop>
 								<source src="videos/3.mp4.mp4" media="only screen and (min-device-width: 568px)">
 								<source src="videos/3.iphone.mp4" media="only screen and (max-device-width: 568px)">
 								<source src="videos/3.webmsd.webm"></source> 
@@ -105,7 +116,7 @@
 					<div class="content">
 						<div class="inner">
 							<h2>Other Network Shapes</h2>
-							<video id="video5" class="video left" poster="images/poster_hex.png" autobuffer preload=auto playsinline loop>
+							<video id="video5" class="video right" poster="images/poster_hex.png" autobuffer preload=auto playsinline loop>
 								<source src="videos/5.mp4.mp4" media="only screen and (min-device-width: 568px)">
 								<source src="videos/5.iphone.mp4" media="only screen and (max-device-width: 568px)">
 								<source src="videos/5.webmsd.webm"></source> 
@@ -119,8 +130,15 @@
 					<div class="content" id="results">
 						<div class="inner">
 							<h2>Novel Results</h2>
-							<p>My results showed a clear dividing line between dangerous 'invasive' diseases and less-risky non-invasive ones. To determine whether a new disease is likely to be invasive, one can measure its infectivity and synergy in the safety of a lab, and observe which side of the dividing line it lies. </p>
-							<p>Somewhat counter-intuitively, the spread of cooperative diseases can actually be lessened by <i>increasing</i> the frequency of random rewiring jumps. This is because the random jumps prevent the disease from forming hot-spots, and stop the infected individuals benefiting from nearby cooperators.</p>
+
+							<p>My results showed a clear dividing line between dangerous 'invasive' diseases and less-risky non-invasive ones. To determine whether a new disease is likely to be invasive, one can measure its infectivity (\(\alpha\)) and synergy (\(\beta\)) in the safety of a lab, and observe which side of the dividing line it lies. </p>
+
+							<div class="container"> <a class="centerimage"><img src="images/invasive.png"></a></div>
+
+							<p>Somewhat counter-intuitively, the spread of cooperative diseases can actually be lessened by <i>increasing</i> the frequency of random rewiring jumps. This is because the random jumps prevent the disease from forming hot-spots, and stop the infected individuals benefiting from nearby cooperators. This is only true of <strong>very</strong> cooperative diseases, and I measured that threshold of cooperativity is \(\beta \approx 3.0 \). </p>
+
+							<div class="container"> <a class="centerimage"><img src="images/rewiring-effect.png"></a></div>
+
 						</div>
 					</div>
 				</section>

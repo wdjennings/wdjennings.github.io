@@ -22,49 +22,55 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-/* colour variables (for easy changing scheme) */
+/* Color scheme: grays and blacks */
 :root {
+	--background-color: #f5f5f5;
+	--highlight-color: #f5f5f5;
+	--text-color: #262626;	
 
-	--background-color: #312450;
-	--white-color: #ffffff;
+	--button-text-color: #ffffff;
+	--button-highlight-color: rgba(63,63,63,1.0);
+	--button-highlight-border-color: rgba(255,255,255,0.05);
 
-	/* For buttons and icons */	
-	--main-color: #312450;
-	--header-color: #5e42a6;
-
-	/* Sidebar colours */
-	--sidebar-color: #312450;
-	--sidebar-gradient1-color: #5e42a6;
-	--sidebar-gradient2-color: #009688; /* Must be same as style3??? */
-	--sidebar-alt-color: #3c2c62;
-
-	/* Wrapper background colours */
-	--alt-color: #261c3e;
-	--style1-color: #5e42a6;
-	--style1-alt-color: #493382;
-	--style2-color: #5052b5;
-	--style2-alt-color: #3e4094;
-	--style3-color: #009688;
-	--style3-alt-color: #953d75;
+	--main-color: #3f3f3f;
+	--header-color: #3f3f3f;
+	--sidebar-color: #ffffff;
+	--sidebar-gradient1-color: #ffffff;
+	--sidebar-gradient2-color: #ffffff; 
+	--sidebar-alt-color: #ffffff;
+	--intro-color: #dcdcdc;
+	--intro-alt-color: #dcdcdc;
+	--style1-color: #f5f5f5;
+	--style1-alt-color: #f5f5f5;
+	--style3-color: #3f3f3f;
+	--style3-alt-color: #3f3f3f;
+	--footer-color: #3f3f3f;
 }
 
-/* Old colour scheme 
+/* Color scheme : blues and purples; */
+/*:root {
 	--background-color: #312450;
-	--white-color: #ffffff;
+	--highlight-color: #ffffff;
+	--text-color: rgba(255, 255, 255, 0.55);
+
+	--button-text-color: #312450;
+	--button-highlight-color: #ffffff;
+	--button-highlight-border-color: rgba(255,255,255,0.05);
+
 	--main-color: #312450;
 	--header-color: #5e42a6;
 	--sidebar-color: #312450;
 	--sidebar-gradient1-color: #5e42a6;
 	--sidebar-gradient2-color: #009688;
 	--sidebar-alt-color: #3c2c62;
-	--alt-color: #261c3e;
+	--intro-color: #5052b5;
+	--intro-alt-color: #3e4094;
+	--footer-color: #261c3e;
 	--style1-color: #5e42a6;
 	--style1-alt-color: #493382;
-	--style2-color: #5052b5;
-	--style2-alt-color: #3e4094;
 	--style3-color: #009688;
 	--style3-alt-color: #953d75;
-/*
+}*/
 
 body {
 	line-height: 1;
@@ -110,28 +116,6 @@ input, select, textarea {
 }
 
 
-/* Video */
-.video {
-	float: left;
-	margin: 0 1.5em 1em 0;
-	top: 0.25em;
-	max-width: 40%;
-	min-width: 40%;	
-    display: block
-}
-
-.bigvideo {
-	max-width: 100%;
-	margin: 0 1.5em 1em 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block
-}
-
-
-
-
-
 /* Basic */
 	@-ms-viewport {
 		width: device-width;
@@ -173,11 +157,13 @@ input, select, textarea {
 		}
 
 
+/* Centering wrapper class */
+	.centering{ text-align: center; }
 
 
 /* Type */
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
+		color: var(--text-color);
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
@@ -218,11 +204,11 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: var(--white-color);
+			color: var(--text-color);
 		}
 
 	strong, b {
-		color: var(--white-color);
+		color: var(--text-color);
 		font-weight: bold;
 	}
 
@@ -235,7 +221,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: var(--white-color);
+		color: var(--text-color);
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -1886,7 +1872,7 @@ input, select, textarea {
 		border: solid 1px !important;
 		border-color: rgba(255, 255, 255, 0.15) !important;
 		border-radius: 3em;
-		color: var(--white-color) !important;
+		color: var(--button-highlight-color) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -1917,7 +1903,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
 			-ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
 			transition: opacity 0.2s ease, transform 0.2s ease;
-			background: var(--white-color);
+			background: var(--button-highlight-color);
 			border-radius: 3em;
 			content: '';
 			height: 100%;
@@ -1943,6 +1929,9 @@ input, select, textarea {
 		.button.fit {
 			width: 100%;
 		}
+		.button.mostlyfit {
+			width: 80%;
+		}
 
 		input[type="submit"].small,
 		input[type="reset"].small,
@@ -1965,8 +1954,8 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: var(--white-color);
-			color: var(--main-color) !important;
+			background-color: var(--button-highlight-color);
+			color: var(--button-text-color) !important;
 		}
 
 			input[type="submit"].primary:after,
@@ -1996,7 +1985,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: rgba(255, 255, 255, 0.55) !important;
+			border-color: var(--button-highlight-border-color) !important;
 		}
 
 			input[type="submit"]:hover:after,
@@ -2016,7 +2005,7 @@ input, select, textarea {
 			input[type="button"]:hover:active,
 			button:hover:active,
 			.button:hover:active {
-				border-color: var(--white-color) !important;
+				border-color: var(--button-highlight-border-color) !important;
 			}
 
 				input[type="submit"]:hover:active:after,
@@ -2346,7 +2335,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: var(--white-color);
+		color: var(--highlight-color);
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
@@ -2391,8 +2380,8 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: var(--white-color);
-			box-shadow: 0 0 0 1px var(--white-color);
+			border-color: var(--highlight-color);
+			box-shadow: 0 0 0 1px var(--highlight-color);
 		}
 
 	select {
@@ -2406,7 +2395,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: var(--white-color);
+			color: var(--highlight-color);
 			background: var(--main-color);
 		}
 
@@ -2488,16 +2477,16 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: var(--white-color);
-			border-color: var(--white-color);
+			background: var(--highlight-color);
+			border-color: var(--highlight-color);
 			color: var(-style3-color);
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: var(--white-color);
-			box-shadow: 0 0 0 1px var(--white-color);
+			border-color: var(--highlight-color);
+			box-shadow: 0 0 0 1px var(--highlight-color);
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2554,7 +2543,7 @@ input, select, textarea {
 			width: 2.5em;
 			height: 2.5em;
 			display: block;
-			background: var(--white-color);
+			background: var(--highlight-color);
 			border-radius: 100%;
 			color: var(--main-color);
 			text-align: center;
@@ -2566,6 +2555,14 @@ input, select, textarea {
 				font-size: 1.25em;
 			}
 
+				.wrapper.intro .icon.major:before {
+					color: var(--intro-color);
+				}
+
+				.wrapper.intro-alt .icon.major:before {
+					color: var(--intro-alt-color);
+				}
+
 				.wrapper.style1 .icon.major:before {
 					color: var(--style1-color);
 				}
@@ -2574,13 +2571,6 @@ input, select, textarea {
 					color: var(--style1-alt-color);
 				}
 
-				.wrapper.style2 .icon.major:before {
-					color: var(--style2-color);
-				}
-
-				.wrapper.style2-alt .icon.major:before {
-					color: var(--style2-alt-color);
-				}
 
 				.wrapper.style3 .icon.major:before {
 					color: #var(--style3-color);
@@ -2592,6 +2582,34 @@ input, select, textarea {
 
 
 
+
+/* Video */
+	.video.left {
+		float: left;
+		margin: 0 1.5em 1em 0;
+		top: 0.25em;
+		max-width: 40%;
+		min-width: 40%;	
+	    display: block
+	}
+
+	.video {
+		float: left;
+		margin: 0 1.5em 1em 0;
+		top: 0.25em;
+		max-width: 40%;
+		min-width: 40%;	
+	    display: block
+	}
+
+/*
+	.bigvideo {
+		max-width: 80%;
+		margin: 0 1.5em 1em 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    display: block
+	}*/
 
 
 
@@ -2608,13 +2626,23 @@ input, select, textarea {
 			display: block;
 		}
 
-		.image.left, .image.right {
-			max-width: 40%;
+		.image.left, .image.right, .image.profile {
+			max-width: 30%;
 		}
 
-			.image.left img, .image.right img {
+			.image.left img, .image.right img, .image.profile img {
 				width: 100%;
 			}
+
+			.image.profile img {
+				border-radius: 50%;
+			}
+
+		.image.profile{
+			float: left;
+			margin: 0 1.5em 1em 0;
+			top: 0.25em;			
+		}
 
 		.image.left {
 			float: left;
@@ -3208,7 +3236,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: var(--white-color);
+			color: var(--highlight-color);
 			font-size: 1em;
 			font-weight: bold;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -3286,8 +3314,17 @@ input, select, textarea {
 
 			}
 
-		.wrapper.alt {
-			background-color: var(--alt-color);
+		.wrapper.intro {
+			background-color: var(--intro-color);
+		}
+
+		.wrapper.intro-alt {
+			background-color: var(--intro-alt-color);
+		}
+
+
+		.wrapper.footer {
+			background-color: var(--footer-color);
 		}
 
 		.wrapper.style1 {
@@ -3296,14 +3333,6 @@ input, select, textarea {
 
 		.wrapper.style1-alt {
 			background-color: var(--style1-alt-color);
-		}
-
-		.wrapper.style2 {
-			background-color: var(--style2-color);
-		}
-
-		.wrapper.style2-alt {
-			background-color: var(--style2-alt-color);
 		}
 
 		.wrapper.style3 {
@@ -3426,7 +3455,7 @@ input, select, textarea {
 
 		#header > .title {
 			border: 0;
-			color: var(--white-color);
+			color: var(--highlight-color);
 			display: block;
 			font-size: 1.25em;
 			font-weight: bold;
@@ -3471,7 +3500,7 @@ input, select, textarea {
 						}
 
 						#header > nav > ul > li a.active {
-							color: var(--white-color);
+							color: var(--highlight-color);
 						}
 
 		@media screen and (max-width: 736px) {
@@ -3833,7 +3862,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a.active {
-				color: var(--white-color);
+				color: var(--highlight-color);
 			}
 
 				#sidebar nav a.active:after {
@@ -3915,11 +3944,9 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
-
 			#sidebar {
 				display: none;
 			}
-
 		}
 
 
@@ -3934,29 +3961,21 @@ input, select, textarea {
 	}
 
 		#intro p {
-			font-size: 1.25em;
+			font-size: 1.0em;
 		}
 
 			@media screen and (max-width: 980px) {
-
 				#intro p br {
 					display: none;
 				}
-
 			}
-
 			@media screen and (max-width: 736px) {
-
 				#intro p {
 					font-size: 1em;
 				}
-
 			}
-
 		@media screen and (max-width: 1280px) {
-
 			#intro {
 				background-attachment: scroll;
 			}
-
 		}

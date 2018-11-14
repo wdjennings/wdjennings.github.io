@@ -4,9 +4,12 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
 <html>
 	<head>
-		<title>Disease Simulation</title>
+		<title>PhD Projects</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -21,9 +24,8 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="phd.html" class="active">21cm Radiation</a></li>
+					<li><a href="phd.html" class="active">PhD Projects</a></li>
 					<li><a href="masters.html">Disease Simulation</a></li>
-					<!--<li><a href="fun.html">Fun</a></li>-->
 				</ul>
 			</nav>
 		</header>
@@ -35,51 +37,73 @@
 			<!-- Header box -->
 			<section id="intro" class="wrapper intro fade-up">
 				<div class="inner">
-					<h1> 21cm Radiation </h1>
-					<p> ... </p>
-					
-					<!-- <p><strong>Tap on pictures to pause/play videos</strong></p> -->
+					<h1>Phd Thesis Projects</h2>
+					I have worked extensively with simulations of 21cm radiation in the early Universe. On this page I give some results from each of my main projects, all of which involve looking at a time known as the Epoch of Reionization when the Universe transitioned from 100% neutral to 100% ionized.</p>
+
+					<p><strong><a href="21cm.html">Click here</a></strong> for more background theory, or scroll down to see my projects</p>
+
 				</div>
 			</section>
 
-			<section id="phd" class="wrapper style1 spotlights">
-				<section>
-					
-					<div class="content">
-						<div class="inner">
-							<h2>Analytic Model</h2>
-							<!--  <p> \( \rho_x(r)=x_0-\Delta x \left[ 1 - \tanh \left( \alpha \left(r - \Delta r \right) \right) \right] \)
-								\( x_0(M,z) = \sum_{ij}{\Theta^{x_0}_{ij}\ (z-z_0)^i\ [log(M)]^j } \)
-								\( \Delta x(M,z) = \sum_{ij}{\Theta^{\Delta x}_{ij}\ (z-z_0)^i\ [log(M)]^j } \)
-							</p> -->
-
-							<!-- <div class="container"> <a class="centerimage"><img src="images/ShortEquations.png"></a></div> -->
-						</div>
-					</div>
-						
-				</section>
+			<section id="machine-learning" class="wrapper style2 spotlights">
 				<section>
 					<div class="content">
 						<div class="inner">
 							<h2>Machine Learning</h2>
-							<p>
-<!-- is from my paper submitted to Monthly Notices of the Royal Astronomical Society, and  -->
+							<p> I used machine learning techniques to speed up the modelling process. Previously, a single simulation could take several hours which is far too long -- I need many thousands of simulations to do any statistics. So I tried out five different methods: multilayer perceptrons; gaussian processes; support vector machines; linear interpolation; and nearest-neighour interpolation. </p>
+
+							<!-- <div class="container"> <a class="centerimage"><img src="images/ShortEquations.png"></a></div> -->
+
+							<p>The fastest and most accurate model used a multilayer perceptron, reproducing the simulation outputs around a billion times faster and matching the actual simulation outputs to within 3% error.</p>
+
+							<div class="container"> <a class="centerimage"><img src="images/IonEff_Predict.png"></a></div>
+
+							<p> I recently submitted a paper for this project to the Monthly Notices of the Royal Astronomical Society. The paper has been through review and is accepted for publication pending minor corrections.</p>
+
+							<ul class="actions fit small">
+								<li></li>
+								<li><a download="files/MNRAS Paper William Jennings.pdf" href="files/MNRAS Paper William Jennings.pdf" target="_blank" class="button primary icon fa-download">Get the PDF here</a></li>
+								<li></li>
+							</ul>
 							</p>
 						</div>
 											
 					</div>
 				</section>
+			</section>
 						
-				<section>
+
+			<section id="analytic" class="wrapper style1 spotlights">
+				<section>		
 					<div class="content">
 						<div class="inner">
-							<h2>Complex Models & Stats</h2>
+							<h2>Scientific Modelling</h2>
+								I created an mathematical model for reionzation as an extension of the <a href="https://arxiv.org/pdf/astro-ph/0001493.pdf">Halo Model</a> for the clustering of matter in the universe. Instead of massive objects, I investigate 21cm hot-spots and cold-spots. Developing the model involved measuring the 21cm 'profiles' around galaxies from simulated data, and then fitting these profiles using a series of interconnected equations:
+
+							<div class="container"> <a class="centerimage"><img src="images/ShortEquations.png"></a></div>
+
+							In the simplest model, each galaxy is placed randomly in the universe and causes a spherical 'bubble' of nearby hydrogen to become ionized. This results in images such as this one below.
+
+							<div class="container"> <a class="centerimage"><img src="images/bubbles.png"></a></div>
+
+							I've recently started trying to improve this model and account for more complex realistic processes: clustering of galaxies; different populations of galaxy masses; and non-spherical bubbles. More results are coming! 
+
+							<!-- <div class="container"> <a class="centerimage"><img src="images/bubbles_better.png"></a></div> -->
+
+						</div>
+					</div>
+				</section>
+
+<!-- 			<section id="bayesian-inference" class="wrapper style1 spotlights">
+				<section>		
+					<div class="content">
+						<div class="inner">
+							<h2>Bayesian Inference</h2>
 						</div>
 					</div>
 				</section>						
-
 			</section>
-
+ -->
 		</div>
 
 		<!-- Footer -->

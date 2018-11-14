@@ -22,7 +22,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.html" class="active">Home</a></li>
-					<li><a href="phd.html">21cm Radiation</a></li>
+					<li><a href="phd.html">PhD Projects</a></li>
 					<li><a href="masters.html">Disease Simulation</a></li>
 					<!--<li><a href="fun.html">Fun</a></li>-->
 				</ul>
@@ -37,13 +37,13 @@
 				<div class="inner">
 					<span class="image profile"><img src="images/Profile.png" alt=""/></span>
 					<h1>Will Jennings</h1>
-					<p> I'm a research scientist, currently finishing my PhD in the Cosmology group at University College London. I have master's and bachelor's degrees from the University of Cambridge in Experimental and Theoretical Physics. I'm currently developing and analysing early-Universe simulations, using Bayesian inference and machine learning to improve our understanding of what the Universe looked like over 12 billion years ago.</p> 
-					<p> Check out my LinkedIn profile and get in touch if you're looking to recruit. Or just send me a message if you have similar interests and a joint project idea! </p>
+					<p> I'm a research scientist, currently finishing my PhD in the Cosmology group at University College London. I have master's and bachelor's degrees in Physics from the University of Cambridge.</p> <p> I'm currently developing and analysing early-Universe simulations, using Bayesian inference and machine learning to improve our understanding of what the Universe looked like over 12 billion years ago.</p> 
+					<p> Check out my LinkedIn profile and get in touch if you're recruiting. Or just send me a message if you have similar interests and a joint project idea! </p>
 					<div class="centering">					
 						<ul class="actions fit small">
 							<li></li>
 							<li><a href="https://www.linkedin.com/in/william-jennings-92747683" class="button primary icon fa-linkedin">My Profile</a></li>
-							<li><a download="files/CV William Jennings.pdf" href="files/CV William Jennings.pdf" target="_blank" class="button primary icon fa-download">CV</a></li>
+							<li><a download="files/CV William Jennings.pdf" href="files/CV William Jennings.pdf" target="_blank" class="button primary icon fa-download">My CV</a></li>
 							<li></li>
 						</ul>
 					</div>
@@ -55,45 +55,55 @@
 
 			<!-- Astrophysics PhD -->
 			<section id="phd" class="wrapper style1 spotlights">	
-				<section>
-					<div class="content">
-						<div class="inner">
-							<h2>Scientific Modelling: 21cm Radiation</h2>
-							<p> I developed and tested my own analytic theory of radiation in the early Universe. My model makes fast predictions concerning the pockets of 21cm-wavelength radiation which grow around young galaxies. </p>
-
-							<div class="container"> <a class="centerimage"><img src="images/bubbles.png"></a></div>
-
-							<div class="centering"> <a href="phd.html" class="button mostlyfit primary">Learn more</a> </div>
-
-						</div>
-					</div>
-				</section>
-
 
 				<section>
 					<div class="content">
 						<div class="inner">
 							<h2>Machine Learning Techniques</h2>
 
-							<p> I used machine learning techniques to reduce the time and cost of running simulations, both of which are crucial limiting factors for statistical analysis. My trained model is around a billion times faster than the full simulation, and mimics the outputs with less than 3% loss in accuracy: the graph below shows a range of predictions both from my model (dotted lines) and the full simuatlions (solid lines). </p>
+							<p> I used machine learning to increase the speed of our simulations dramatically. My trained model is around a billion times faster than the full simulation, with less than a 3% loss in accuracy. This graph shows some predictions both from my model (dotted lines) and the full simuatlions (solid lines). </p>
 
 							<div class="container"> <a class="centerimage"><img src="images/IonEff_predict.png"></a></div>
 
-							<div class="centering"> <a href="phd.html" class="button mostlyfit primary">Learn more</a> </div>						
-													</div>
+							<div class="centering"> <!-- <a href="phd.html#machine-learning" class="button mostlyfit primary">Learn more</a>  --></div>	
+
+							<p> My first-author paper for this project was recent accepted for publication in the Monthly Notices of the Royal Astronomical Society, pending minor corrections.</p><p><strong>Click below to download a copy of the paper, or to learn about this project in more detail.</strong> </p>
+
+							<ul class="actions fit small">
+								<li><a download="files/MNRAS Paper William Jennings.pdf" href="files/MNRAS Paper William Jennings.pdf" target="_blank" class="button primary icon fa-download">Download Emulation Paper</a></li>
+								<li><a href="phd.html#machine-learning" class="button mostlyfit primary">Learn more</a> </li>		
+							</ul>
+
+
+						</div>
 					</div>
 				</section>
 
 				<section>
 					<div class="content">
 						<div class="inner">
+							<h2>Scientific Modelling: 21cm Radiation</h2>
+							<p> I created and tested my own mathematical theory of radiation in the early Universe. My model makes fast predictions about pockets of 21cm-wavelength radiation which grow around young galaxies, such as those in the image shown here. </p>
+
+							<div class="container"> <a class="centerimage"><img src="images/bubbles.png"></a></div>
+
+							<div class="centering"> <a href="phd.html#analytic" class="button mostlyfit primary">Learn more</a> </div>
+
+						</div>
+					</div>
+				</section>
+
+<!-- 				<section>
+					<div class="content">
+						<div class="inner">
 							<h2>Bayesian Inference & MCMC</h2>
 							<p> I'm using Bayesian inference with Markov chain Monte Carlo (MCMC) methods to investigate one of the least understood parts of the Universe's history: the Epoch of Reionization. 21cm radiation is a great way to probe these <a href="https://en.wikipedia.org/wiki/Chronology_of_the_universe#Dark_Ages">'Dark Ages'</a>.</p>
 
-							<div class="centering"> <a href="phd.html" class="button mostlyfit primary">Learn more</a> </div>							
+							<div class="centering"> <a href="phd.html#bayesian-inference" class="button mostlyfit primary">Learn more</a> </div>							
 						</div>
 					</div>
-				</section>				
+				</section> -->
+				
 			</section>
 	
 	
@@ -111,10 +121,10 @@
 								</video>
 							</div>
 							<h2> Master's Thesis: Disease Epidemics</h2>
-							<p> I developed a simulation for how a disease spreads across  a city, extending the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model">Susceptible-Infected-Removed model</a> for Measles, Mumps and Rubella. By running my simulation many times, a newly discovered disease can be classified as 'invasive' (likely to cause an epidemic) or non-invasive. </p>
+							<p> I developed a simulation for how a disease spreads across a city, extending the <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology#The_SIR_model">Susceptible-Infected-Removed model</a> for Measles, Mumps and Rubella. My simulation allows newly discovered diseases to be classified as 'invasive' (likely to cause an epidemic) or non-invasive. </p>
 						</div>
 							<div class="centering">
-								<p><strong>Tap the image above to play the video</strong></p>
+								<p><strong>Tap the image above to play the video, or click below to see more videos from this project</strong></p>
 								<a href="masters.html" class="button mostlyfit primary">Learn more</a>
 							</div>
 

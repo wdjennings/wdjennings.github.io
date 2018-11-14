@@ -24,7 +24,7 @@
 			<nav>
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="phd.html">21cm Radiation</a></li>
+					<li><a href="phd.html">PhD Projects</a></li>
 					<li><a href="masters.html" class="active">Disease Simulation</a></li>
 					<!--<li><a href="fun.html">Fun</a></li>-->
 				</ul>
@@ -64,7 +64,7 @@
 							<source src="videos/1.iphone.mp4" media="only screen and (max-device-width: 568px)">
 							<source src="videos/1.webmsd.webm"></source> 
 							</video>						
-							<p> My simulation starts with a single infected individual at the center of an otherwise healthy city. The city contains a huge number of individuals spaced out on a grid. Each individual can be in one of three states: susceptible, infected, or removed. This video shows an example simulation. Susceptible healthy individuals are green, infected individuals are red, and removed individuals are black. </p>
+							<p> My simulation starts with a single infected individual at the center of an otherwise healthy city. Each individual in the city can be in one of three states: susceptible, infected, or removed. This video shows an example simulation. Susceptible healthy individuals are green, infected individuals are red, and removed individuals are black. </p>
 						</div>
 					</div>
 						
@@ -73,7 +73,7 @@
 					<div class="content">
 						<div class="inner">
 							<h2>Synergy </h2>
-							<p> Some diseases behave either competitively or cooperatively. In the simple SIR model, the disease is neither cooperative nor competitive: an individual with two infected neighbours is twice as likely to be infected; an individual with three infected neighbours is three times as likely; and so on.</p>
+							<p> Some diseases behave either competitively or cooperatively. These two effects are collectively known as synergy. </p>
 						</div>
 						
 						<div class="inner">
@@ -83,7 +83,7 @@
 								<source src="videos/2.webmsd.webm"></source> 
 							</video>
 							<h3>Cooperative Synergy</h3>								
-							</p>With cooperative synergy, infected individuals work together to infect new hosts. The infected hosts try to stay as close together as possible, encouraging the infection to spread outwards in clusters as can be seen here.</p>
+							</p>With cooperative synergy, infected individuals work together to infect new hosts. The infected hosts try to stay as close together as possible, encouraging the infection to spread outwards in one extended wavefront, as can be seen here.</p>
 						</div>
 
 						<div class="inner">
@@ -93,7 +93,7 @@
 								<source src="videos/3.webmsd.webm"></source> 
 							</video>
 							<h3>Competitive Synergy</h3>
-							</p> With competitive synergy, infected invididuals work against one another. The infected hosts try to stay as far apart as possible, which discourages clusters. In this video, the infection progresses outwards in separate paths or tendrils. </p>
+							</p> With competitive synergy, infected invididuals work against one another. The infected hosts try to stay as far apart as possible, which discourages clusters. In this video, the infection progresses outwards in separate tendrils. </p>
 						</div>						
 					</div>
 				</section>
@@ -107,7 +107,7 @@
 								<source src="videos/4.iphone.mp4" media="only screen and (max-device-width: 568px)">
 								<source src="videos/4.webmsd.webm"></source> 
 							</video>
-							<p> My simulation allows the disease to randomly jump across the map, simulating infected individuals travelling from one physical location to another. For instance, a person travelling from home to their place of work, or an insect travelling across a field. This video shows how rewiring can dramatically increase the chance of an epidemic, although an interesting result was seen for cooperative diseases (see <a href="#results">New Results</a> below).</p>
+							<p> My simulation allows the disease to randomly jump across the map. For instance, an infected person travelling from home to their place of work, or an insect travelling across a field. Rewiring can dramatically increase the chance of an epidemic, as show in this video. </p>
 						</div>
 					</div>
 				</section>						
@@ -121,7 +121,7 @@
 								<source src="videos/5.iphone.mp4" media="only screen and (max-device-width: 568px)">
 								<source src="videos/5.webmsd.webm"></source> 
 							</video>
-							<p> My simulation has a superclass for any shape of network, and subclasses for specific city shapes and connections. In the videos above, individuals are reguarly spaced on a square grid and the infection can only transfer between the four directly adjacent neighbours. I also implemented a hexagonal network shown here, where each individual can pass the infection to its six nearest neighbours. </p>
+							<p> My simulation can account for any shape of network. In the hexagonal network shown here, each individual can pass the infection to its six nearest neighbours. More advanced networks, for instance the non-regular spatial network of world airports, could easily be simulated by subclassing my Python class. </p>
 						</div>
 					</div>
 				</section>						
@@ -129,13 +129,13 @@
 				<section>
 					<div class="content" id="results">
 						<div class="inner">
-							<h2>Novel Results</h2>
+							<h2>Experimental Results</h2>
 
-							<p>My results showed a clear dividing line between dangerous 'invasive' diseases and less-risky non-invasive ones. To determine whether a new disease is likely to be invasive, one can measure its infectivity (\(\alpha\)) and synergy (\(\beta\)) in the safety of a lab, and observe which side of the dividing line it lies. </p>
+							<p>My results showed a clear dividing line between dangerous 'invasive' diseases and less-risky non-invasive ones. To determine whether a new disease is likely to be invasive, one can measure its infectivity (\(\alpha\)) and synergy (\(\beta\)) in the safety of a lab, and observe which side of the dividing line it lies. Cooperative synergy has \(\beta \gt 0\), and competitive synergy has \(\beta \lt 0\), and larger values of \(\beta\) indicate a stronger effect. </p>
 
 							<div class="container"> <a class="centerimage"><img src="images/invasive.png"></a></div>
 
-							<p>Somewhat counter-intuitively, the spread of cooperative diseases can actually be lessened by <i>increasing</i> the frequency of random rewiring jumps. This is because the random jumps prevent the disease from forming hot-spots, and stop the infected individuals benefiting from nearby cooperators. This is only true of <strong>very</strong> cooperative diseases, and I measured that threshold of cooperativity is \(\beta \approx 3.0 \). </p>
+							<p>Somewhat counter-intuitively, the spread of cooperative diseases can actually be lessened by <i>increasing</i> the frequency of random rewiring jumps. This is because the random jumps prevent the disease from forming hot-spots, and stop the infected individuals benefiting from nearby cooperators. This is only true of <under><u>very</u></strong> cooperative diseases: I measured that the threshold of cooperativity for which rewiring stops the spread of disease is \(\beta \approx 3.0 \). </p>
 
 							<div class="container"> <a class="centerimage"><img src="images/rewiring-effect.png"></a></div>
 

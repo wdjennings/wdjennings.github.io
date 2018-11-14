@@ -164,7 +164,10 @@ input, select, textarea {
 
 
 /* Centering wrapper class */
-	.centering{ text-align: center; }
+	.centering{ 
+		text-align: center; 
+		margin: 0 0 1em 0;
+	}
 
 
 /* Type */
@@ -2611,7 +2614,7 @@ input, select, textarea {
 			max-width: 30%;
 		}
 
-			.image.left img, .image.right img, .image.profile img {
+			.image.left img, .image.right img, .image.profile img, .image.tall img {
 				width: 100%;
 			}
 
@@ -2629,6 +2632,13 @@ input, select, textarea {
 			float: left;
 			margin: 0 1.5em 1em 0;
 			top: 0.25em;
+		}
+
+		.image.tall {
+			float: left;
+			margin: 0 1.5em 1em 0;
+			top: 0.25em;
+			max-width: 50%;
 		}
 
 		.image.right {
@@ -2664,9 +2674,6 @@ input, select, textarea {
     align-items: center;
     padding-top: 1em;
     padding-bottom: 1em;
-/*    padding-left: 1em;
-    padding-right: 1em;
-*/	/*max-width: 80%;*/
 	text-align: center;
 }
 
@@ -2678,6 +2685,19 @@ input, select, textarea {
 
 .centerimage img {
 	max-width: 60%;
+	text-decoration:none;
+	border-radius: 5%;
+}
+
+.centerimagebig {
+    display: inline-block;
+	vertical-align: center;
+	border:none!important; 
+}
+
+.centerimagebig img {
+	max-width: 90%;
+	max-height: 50%;
 	text-decoration:none;
 	border-radius: 5%;
 }
